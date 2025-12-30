@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | StoneBeam-NH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="container header-flex">
+            <div class="logo">
+               <i class="fa-solid fa-screwdriver-wrench"></i> StoneBeam-NH
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="guides.html">Guides</a>
+                <a href="#" class="active">Blog</a>
+                <a href="login.html" class="nav-btn">Portal Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <p class="subtitle">Insights & Updates</p>
+            <h1 class="gradient-text">The Construction Log</h1>
+            <p class="desc">Project showcases, material science, and industry news.</p>
+        </div>
+    </section>
+
+    <main class="container grid-layout">
+        
+        <section class="blog-feed">
+            
+            <article class="glass-card featured">
+                <div class="card-img" style="background-image: url('https://source.unsplash.com/1200x600/?luxury,villa');">
+                    <span class="badge peach">Project Showcase</span>
+                </div>
+                <div class="card-body">
+                    <div class="meta">
+                        <span><i class="fa-regular fa-calendar"></i> Dec 28, 2025</span>
+                        <span><i class="fa-solid fa-user"></i> By Lead Architect</span>
+                    </div>
+                    <h2>From Empty Lot to Luxury Villa: The Riverview Story</h2>
+                    <p class="excerpt">See the incredible before-and-after transformation of our latest 5,000 sq ft residential project in downtown New Hampshire.</p>
+                    <a href="#" class="read-btn">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <div class="sub-grid">
+                
+                <article class="glass-card">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/600x400/?steel,beam');">
+                        <span class="badge purple">Materials</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>H-Beams vs. I-Beams</h3>
+                        <p class="excerpt">Which structural steel is right for your home extension? We break down the load-bearing differences.</p>
+                        <a href="#" class="read-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="glass-card">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/600x400/?winter,house');">
+                        <span class="badge peach">Maintenance</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Winter Concrete Care</h3>
+                        <p class="excerpt">Don't let the frost crack your driveway. Here are 3 essential tips for winterizing your masonry.</p>
+                        <a href="#" class="read-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="glass-card">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/600x400/?interior,modern');">
+                        <span class="badge purple">Trends</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>2026 Interior Design Trends</h3>
+                        <p class="excerpt">Why "Industrial Chic" and exposed brick are making a huge comeback in commercial offices.</p>
+                        <a href="#" class="read-link">Read More</a>
+                    </div>
+                </article>
+
+                <article class="glass-card">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/600x400/?award,team');">
+                        <span class="badge peach">News</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>We Won the Safety Award!</h3>
+                        <p class="excerpt">StoneBeam-NH is proud to accept the "Safest Site 2025" award from the National Builders Association.</p>
+                        <a href="#" class="read-link">Read More</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <aside class="sidebar">
+            
+            <div class="glass-widget">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search blog...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="glass-widget">
+                <h3 class="widget-title">Categories</h3>
+                <ul class="cat-list">
+                    <li><a href="#">Showcases <span>(5)</span></a></li>
+                    <li><a href="#">Maintenance <span>(12)</span></a></li>
+                    <li><a href="#">Materials <span>(8)</span></a></li>
+                    <li><a href="#">Trends <span>(3)</span></a></li>
+                    <li><a href="#">Company News <span>(2)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="glass-widget highlight">
+                <h3><i class="fa-regular fa-envelope"></i> Weekly Digest</h3>
+                <p>Get maintenance tips sent to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="button" class="gradient-btn-small">Subscribe</button>
+                </form>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 StoneBeam-NH. Blog & Insights.</p>
+        </div>
+    </footer>
+    <script src="blog.js"></script>
+</body>
+</html>

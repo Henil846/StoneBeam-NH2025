@@ -1,0 +1,92 @@
+:root {
+    --primary-violet: #2e1065; /* Deep Violet */
+    --accent-purple: #7c3aed;  /* Vivid Purple */
+    --light-violet: #f5f3ff;   /* Soft Purple Tint */
+    --white: #ffffff;
+    --text-main: #1e1b4b;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 10%;
+    background: var(--primary-violet);
+    color: white;
+    align-items: center;
+}
+
+.logo { font-weight: 700; letter-spacing: 1px; }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+
+.nav-links a { color: white; text-decoration: none; font-weight: 600; }
+
+.active { color: var(--accent-purple); }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-violet) 0%, #4c1d95 100%);
+    padding: 100px 10%;
+    text-align: center;
+    color: white;
+}
+
+.highlight { color: var(--accent-purple); text-shadow: 0 0 10px rgba(124, 58, 237, 0.3); }
+
+.btn-primary {
+    background: var(--accent-purple);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background: #6d28d9; transform: translateY(-2px); }
+
+/* Trust Section */
+.trust-section { padding: 80px 10%; background: var(--light-violet); text-align: center; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid var(--accent-purple);
+}
+
+/* Job Section */
+.jobs { padding: 80px 10%; }
+
+.job-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.job-card:hover { border-color: var(--accent-purple); background: var(--light-violet); }
+
+.job-header { display: flex; justify-content: space-between; font-weight: 700; }
+
+.job-content { display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; }
+
+.btn-apply { background: var(--primary-violet); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+
+footer { background: var(--primary-violet); color: white; text-align: center; padding: 2rem; }

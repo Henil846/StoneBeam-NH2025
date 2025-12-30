@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | StoneBeam-NH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="auth-card">
+        <div class="header">
+            <h2>Welcome Back</h2>
+            <p>Login to your portal</p>
+        </div>
+
+        <div id="error-msg" class="msg-box error"></div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Phone Number or Email</label>
+                <input type="text" id="loginInput" placeholder="Enter phone or email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="loginPass" placeholder="Enter password" required>
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePass('loginPass', this)"></i>
+            </div>
+
+            <a href="forgot-password.html" class="forgot-pass">Forgot Password?</a>
+
+            <button type="submit" class="gradient-btn">Login Now</button>
+        </form>
+
+        <div class="links">
+            <p>New here? <a href="signup.html">Create Account</a></p>
+        </div>
+    </div>
+
+    <script>
+        function togglePass(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = document.getElementById('loginInput').value;
+            const pass = document.getElementById('loginPass').value;
+            const errorBox = document.getElementById('error-msg');
+
+            let users = JSON.parse(localStorage.getItem('sb_users')) || [];
+            
+            // Check if input matches either Phone OR Email
+            const user = users.find(u => u.phone === input || u.email === input);
+
+            if (!user) {
+                showError("Account not registered.");
+            } else if (user.password !== pass) {
+                showError("Invalid Password.");
+            } else {
+                errorBox.style.display = 'none';
+                alert("Welcome back, " + user.name + "!");
+                window.location.href = 'index.html'; 
+            }
+
+            function showError(msg) {
+                errorBox.style.display = 'block';
+                errorBox.innerText = msg;
+            }
+        });
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>
