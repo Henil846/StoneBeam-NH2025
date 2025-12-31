@@ -100,12 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateList.removeChild(updateList.lastChild);
         }
     }
-
-    // Simulate a new update after 10 seconds
-    setTimeout(() => {
-        addLiveUpdate("New Bid Received", "Contractor 'BuildRight' bid on Project Home - Just now");
-    }, 10000);
-
 });
 
 // --- Simple CSS Animation for the Live Updates ---
@@ -116,4 +110,5 @@ style.textContent = `
         to { opacity: 1; transform: translateY(0); }
     }
 `;
+
 document.head.appendChild(style);
